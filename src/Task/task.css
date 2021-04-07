@@ -1,0 +1,103 @@
+.single-task-box {
+    display: flex;
+    margin-bottom: 1rem;
+
+}
+
+
+h2 {
+    font-size: 3rem;
+    padding-bottom: 1.5rem;
+    font-weight: 300;
+    color: #29a19c;
+}
+
+.h2-span {
+    font-size: 1.8rem;
+    padding-left: .5rem;
+    font-weight: 300;
+}
+
+.single-task {
+    flex: 1;
+    background-color: #393e46;
+    margin-right: .8rem;
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+    transition: all .35s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .8);
+}
+
+.single-task:hover {
+    background-color: #393e46d0;
+    cursor: pointer;
+}
+
+.task-name {
+    flex: 1;
+    display: flex;
+    color: #bbbbbb;
+    align-items: center;
+    font-size: 1.8rem;
+    padding: .5rem 0;
+    padding-left: 1rem;
+    font-weight: 300;
+}
+
+.task-index {
+    padding: .5rem;
+    border-radius: 2.25px;
+    margin-left: .75rem;
+    color: #29a19c;
+    font-size: 2.25rem;
+    font-weight: 300;
+}
+
+.task-check {
+    flex: 0 0 8%;
+    cursor: pointer;
+    font-size: 2.25rem;
+}
+
+.not-checked {
+    color: #6e7c7c;
+}
+
+.checked {
+    color: #29a19c;
+}
+
+.delete-btn {
+    padding: 1rem;
+    flex: 0 0 15%;
+    background-color: #29a19c;
+    border: none;
+    border-radius: 2px;
+    color: lightgrey;
+    align-self: center;
+    cursor: pointer;
+    font-size: 2rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+    transition: all .2s;
+}
+
+.delete-btn:focus {
+    outline: none;
+}
+
+.delete-btn:hover {
+    background-color: #339c99c2;
+}
+
+.checkbox {
+    display: none;
+}
+
+@media only screen and (max-width:473px) {
+    .task-check {
+        flex: 0 0 15%;
+        text-align: center;
+        font-size: 2.5rem;
+    }
+}

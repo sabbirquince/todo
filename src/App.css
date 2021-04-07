@@ -1,38 +1,152 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  font-size: 62.5%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app {
   min-height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(./images/bg-desktop-dark.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #222831;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.box {
+  width: 37.5vw;
+  margin: 0 auto;
+  padding-top: 5rem;
+}
+
+h1 {
+  font-size: 3.2rem;
+  padding: 1.75rem 0;
+  font-weight: 300;
+  color: #29a19c;
+}
+
+.create-box {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.input-box {
+  flex: 1;
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.create-btn {
+  padding: 1.75rem 1rem;
+  flex: 0 0 15%;
+  background-color: #29a19c;
+  border: none;
+  border-radius: 2px;
+  color: lightgrey;
+  align-self: center;
+  font-family: 'Josefin Sans', sans-serif;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+  transition: all .2s;
+}
+
+.todo-input {
+  padding: 1.5rem 2rem;
+  border: none;
+  background-color: #393e46;
+  border-radius: 3px;
+  transition: all .25s;
+  color: #bbbbbb;
+  font-family: 'Josefin Sans', sans-serif;
+  flex: 1;
+  margin-right: .5rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .4);
+}
+
+.todo-input:focus {
+  outline: none;
+  background-color: #393e46;
+  transform: scaleY(1.15);
+}
+
+
+.create-btn:hover {
+  background-color: #29a19dcc;
+}
+
+.create-btn:focus {
+  outline: none;
+}
+
+.tasks {
+  padding: 3rem 0;
+}
+
+@media only screen and (max-width:1430px) {
+  html {
+    font-size: 55%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media only screen and (max-width:1255px) {
+  html {
+    font-size: 50%;
+  }
+
+  .box {
+    width: 50vw;
+  }
+}
+
+@media only screen and (max-width:850px) {
+  .box {
+    width: 75vw;
+  }
+}
+
+@media only screen and (max-width:570px) {
+  .app {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(./images/bg-mobile-dark.jpg);
+  }
+
+  .box {
+    width: 90vw;
+    padding-top: 2.5rem;
+  }
+
+  .input-box {
+    flex-direction: column;
+  }
+
+  .create-box {
+    flex-direction: column;
+  }
+
+  .todo-input {
+    margin-bottom: 1rem;
+    margin-right: 0;
+  }
+
+  .create-btn {
+    flex: 1;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width:473px) {
+  .box {
+    width: 95vw;
+  }
+
+  .tasks {
+    padding: 3.75rem 0;
+  }
+}
+
+@media only screen and (max-width:376px) {
+  .tasks {
+    padding-top: 6.5rem;
   }
 }

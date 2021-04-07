@@ -1,0 +1,67 @@
+.task-head {
+    display: flex;
+    background-color: #212125;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+    margin-bottom: 1rem;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+    font-size: 1.6rem;
+    font-weight: 300;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.task-head p {
+    padding: 1rem;
+    color: #29a19c;
+    transition: all .2s;
+}
+
+.task-head p:hover {
+    color: #a3f7bf;
+}
+
+.task-head div:nth-child(odd) {
+    flex: 1;
+}
+
+.task-head div:last-child {
+    text-align: end;
+}
+
+.task-state {
+    flex: 2;
+    display: flex;
+    justify-content: space-evenly;
+    /* font-size: 1.6rem; */
+}
+
+@media only screen and (max-width:570px) {
+    .task-head {
+        flex-direction: column;
+        background-color: transparent;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .task-state,
+    .task-first,
+    .task-head div:last-child {
+        background-color: #212125;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+        margin-bottom: 1rem;
+        border-radius: 2px;
+    }
+
+    .task-first {
+        text-align: center;
+    }
+
+    .task-head div:last-child {
+        text-align: center;
+    }
+
+    .task-state {
+        order: 2;
+    }
+}
